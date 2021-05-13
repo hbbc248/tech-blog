@@ -1,0 +1,29 @@
+<h1 class="page-title">
+        <a href="/dashboard" class="bg-secondary rounded text-dark px-3 py-1 text-decoration-none">Your Dashboard</a>
+      </h1>
+    </header>
+    <main>
+{{#if posts.length}}
+<section class="bg-secondary">
+  <ol class="">
+  {{#each posts as |post|}}
+  	<li>
+    	<article class="p-2">
+        <div class="d-flex justify-content-between dashboard-post mx-auto bg-success rounded">
+          <div>
+            <a class="text-white dashboard-post-text" href="/dashboard/edit/{{post.id}}">{{post.title}}</a>
+          </div>
+          <div class="meta text-white dashboard-post-text">
+            {{format_date created_at}}
+          </div>
+        </div>
+      </article>
+  	</li>
+  {{/each}}
+	</ol>
+</section>
+{{/if}}
+<div class="text-center fixed-bottom mb-2">
+<a href="/create-post" class="btn btn-dark new-post-btn">+ New Post</a>
+</div>
+ 
