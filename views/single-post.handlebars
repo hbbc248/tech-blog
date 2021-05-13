@@ -1,0 +1,30 @@
+<h1 class="page-title">
+        <a href="/" class="bg-secondary rounded text-dark px-3 py-1 text-decoration-none">The Tech Blog</a>
+      </h1>
+    </header>
+    <main>
+
+{{> post-list post }}
+
+{{#if loggedIn}}
+<form class="comment-form mx-auto border-dark">
+  <div class="p-3 bg-dark">
+    <h2></h2>
+  </div>
+  <div class="">
+    <h2 class="comment-form-title text-dark">Comment</h2>
+  </div>
+  <div class="pl-2">
+    <textarea name="comment-body" class="form-control comment-input text-dark"></textarea>
+  </div>
+  <div class="p-2">
+    <button type="submit" class="btn btn-success text-white form-control">Submit</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
