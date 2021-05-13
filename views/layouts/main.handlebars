@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Just Tech News</title>
   <!-- bootstrap style sheet-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="/stylesheets/theme_1620930795155.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -19,15 +19,15 @@
         <div>
           <a href="/dashboard" class="btn btn-dark text-secondary">Dashboard</a>
         </div>
-        <!-- {{#if loggedIn}} -->
+        {{#if loggedIn}}
         <div>
-          <button id="logout" class="btn btn-dark">Logout</button>
+          <button id="logout" class="btn btn-dark text-secondary">Logout</button>
         </div>
-        <!-- {{else}} -->
+        {{else}}
         <div>
           <a href="/login" class="btn btn-dark text-secondary">Login</a>
         </div>
-        <!-- {{/if}} -->
+        {{/if}}
       </div>
       <h1 class="page-title">
         <a href="/" class="bg-secondary rounded text-dark px-3 py-1 text-decoration-none">The Tech Blog</a>
@@ -37,8 +37,8 @@
       {{{ body }}}
     </main>
   </div>
-  <!-- {{#if loggedIn}} -->
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  <!-- {{/if}} -->
+  {{/if}}
 </body>
 </html>
