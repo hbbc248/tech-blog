@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require("../../models");
 
 
+
 // GET /api/users
 router.get("/", (req, res) => {
     // Access our User model and run .findAll() method)
@@ -66,6 +67,7 @@ router.post("/", (req, res) => {
         req.session.loggedIn = true;
   
         res.json(dbUserData);
+        timeout();
       });
     });
 });
@@ -92,8 +94,8 @@ router.post("/login", (req, res) => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
-
       res.json({ user: dbUserData, message: "You are now logged in!" });
+      
     });
   });
 });
