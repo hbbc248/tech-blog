@@ -2,6 +2,7 @@
   <div class="p-3 bg-dark">
     <h4 class="text-secondary">Comments</h4>
   </div>
+  {{#if this}}
   {{#each this}}
   <section class="p-3">
     <div class="text comment-body text-dark">
@@ -12,4 +13,11 @@
     </div>
   </section>
   {{/each}}
+  {{else}}
+  <section class="p-3">
+    <div class="text comment-body text-dark">
+      No Comments
+    </div>
+  </section>
+  {{/if}}
 </div>
