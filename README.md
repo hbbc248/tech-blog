@@ -33,6 +33,9 @@
   ## Usage
   Run NPM start to start the server first. Open your browser and type http://localhost:3001/
 
+  ## Link to Deployed Application
+  https://blog-tech-new.herokuapp.com/
+
   ## Contribution
   Anybody is free to contribute to this project as desired. Just contact me via email to present your new ideas to add to this project.
 
@@ -43,3 +46,5 @@
   Please visit my GitHub page: https://github.com/hbbc248
   
   For more information please email me at: ibrahimzerlin@hotmail.com
+
+ 
